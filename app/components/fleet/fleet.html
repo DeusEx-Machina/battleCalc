@@ -1,0 +1,23 @@
+<div class="table-responsive" ng-controller="fleetCtrl">
+    <table class="table table-striped">
+        <legend>Fleet</legend>
+
+        <thead>
+        <th>Name</th>
+        <th>Power</th>
+        <th>Armor</th>
+        <th>Shield</th>
+        <th>Quantity</th>
+        </thead>
+
+        <tbody>
+        <tr ng-repeat="(key, value) in unitBaseValues">
+            <td>{{ key }}</td>
+            <td>{{ value.power }}</td>
+            <td>{{ value.armor }}</td>
+            <td>{{ value.shield }}</td>
+            <td><input type="text" placeholder="0" class="form-control"/></td>
+        </tr>
+        </tbody>
+    </table>
+</div>

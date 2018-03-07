@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Battle Calculator</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body ng-app="battleCalc">
+  <div class="container-fluid">
+    <h1>Battle Calculator</h1>
+    <h5>If this thing lies to you please email me the battle report at <a href="mailto:mecum.cole@gmail.com">mecum.cole@gmail.com</a>
+      and I will take a look and improve it!</h5>
+    <ul class="menu">
+      <li><a href="#!/tech">tech</a></li>
+      <li><a href="#!/defense">defense</a></li>
+      <li><a href="#!/fleet">fleet</a></li>
+    </ul>
+    <player-tech player="attacker"></player-tech>
+    <div ng-view></div>
+  </div>
+
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="app.js"></script>
+  <script src="components/defense/defense.js"></script>
+  <script src="components/fleet/fleet.js"></script>
+  <script src="components/tech/tech.js"></script>
+</body>
+</html>
